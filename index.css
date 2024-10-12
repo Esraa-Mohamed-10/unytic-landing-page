@@ -6,7 +6,8 @@
     --title-size: 3.5rem;
     --title-responsive: 2rem;
     --title-mobile: 1.5rem;
-    --p-responsive: 1.2rem
+    --p-responsive: 1.2rem;
+    --second-color: #f8a000;
 }
 
 * {
@@ -43,13 +44,13 @@ body {
 }
 
 .nav-link:hover {
-    color: #f8a000 !important;
+    color: var(--second-color) !important;
 }
 
 @media (min-width:768px) {
 
     .active {
-        color: #f8a000 !important;
+        color: var(--second-color) !important;
         /* color: var(--text-color) !important; */
         border-radius: 15px !important;
         height: 40px !important;
@@ -65,7 +66,7 @@ body {
 }
 
 .linkedin-icon:hover , .x-icon:hover {
-    color: #f8a000 !important;
+    color: var(--second-color) !important;
 }
 
 .custom-toggler {
@@ -108,13 +109,13 @@ body {
 }
 
 .numbers h5 {
-    color: #f8a000;
+    color: var(--second-color);
 }
 
 
 .gradient-container {
     display: inline;
-    color: #f8a000;
+    color: var(--second-color);
 }
 
 .gradient-text1 {
@@ -155,7 +156,7 @@ body {
 }
 
 .hero-btns button:hover {
-    color: #f8a000;
+    color: var(--second-color);
 }
 
 .hero-Img {
@@ -174,6 +175,7 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* .image-container::before {
@@ -296,7 +298,7 @@ body {
     width: 20%;
     height: 2px;
     position: absolute;
-    background-color: #f8a000;
+    background-color: var(--second-color);
     /* background-color: rgb(242, 242, 245); */
     margin-bottom: 10px;
 }
@@ -394,6 +396,7 @@ body {
 /* service section */
 .service-section {
     color: var(--main-color);
+    padding-top: 5rem;
 }
 
 .service-section h2 {
@@ -434,7 +437,7 @@ body {
 
 .service-icon {
     font-size: 40px;
-    color:#f8a000;
+    color:var(--second-color);
     /* transition: height 0.10s ease; delay */ 
 }
 
@@ -450,6 +453,7 @@ body {
     color: var(--main-color);
     /* color: #f8a000; */
     font-size: 1.2rem;
+    margin: 1.2rem 0;
 }
 
 
@@ -457,7 +461,7 @@ body {
     font-size: 30px;
     /* color: var(--main-color); */
     /* color: #ade0ec; */
-    color: #f8a000;
+    color: var(--second-color);
 }
 
 .arrow-icon {
@@ -579,7 +583,7 @@ body {
     transform: translateX(-50%);
     font-size: 1.5em;
     font-weight: bold;
-    color: #f8a000;
+    color: var(--second-color);
     background-color: white;
     width: 2.5em;
     height: 2em;
@@ -601,7 +605,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center the inner hexagon */
     margin-top: 30px;
 }
 
@@ -635,7 +638,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* This centers the content vertically and horizontally */
     z-index: 1;
 }
 
@@ -692,7 +694,13 @@ p {
 
 
 /* contact section */
-
+.contact-section , .why-choose-us , .service-section {
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 svg {
     height: 20rem;
@@ -793,6 +801,21 @@ form {
 form .title {
     color: var(--main-color);
     font-size: 2.5rem;
+}
+
+.contact-info {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.contact-info a{
+all: unset;
+color: var(--main-color);
+}
+.contact-info i{
+/* color: var(--second-color); */
+color: var(--main-color);
+margin-right: 10px;
 }
 
 form .form-control {

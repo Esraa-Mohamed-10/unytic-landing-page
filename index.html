@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unytic</title>
+    <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon">
 
     <!-- style links -->
     <link rel="stylesheet" href="index.css">
@@ -111,7 +112,7 @@
                 </div>
                 <div class="hero-Img d-none d-md-block">
                     <div class="image-container" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
-                        <img src="./assets/imgs/business-work-area.jpg" alt="" class="profile-image shadow-sm">
+                        <img src="./assets/imgs/business-work-area.jpg" alt="" class="profile-image">
                     </div>
                 </div>
             </div>
@@ -138,7 +139,7 @@
     <!-- end about -->
 
     <!-- start service -->
-    <section class="service-section py-5" id="service">
+    <section class="service-section" id="service">
         <div class="container my-5">
             <h2 class="text-center mb-5" data-aos="fade-down"
              data-aos-duration="1500">Our Services</h2>
@@ -250,7 +251,7 @@
 
 
     <!-- contact -->
-    <section class="py-4" id="contact">
+    <section class="contact-section" id="contact">
         <div class="container">
             <div class="container d-flex justify-content-center align-items-center flex-column flex-lg-row">
 
@@ -732,6 +733,16 @@
                             <h2 class="title text-center mb-4">Talk to Us</h2>
                         </div>
 
+                        <!-- contact info -->
+                        <div class="contact-info d-flex flex-column flex-md-row justify-content-center justify-content-md-around">
+                            <p><a href="mailto:info@example.com" class="contact-link">
+                                <i class="fa fa-envelope"></i> contact@unytic.com
+                            </a></p>
+                            <p><a href="tel:+1 (380) 800 - 5680" class="contact-link">
+                                <i class="fa fa-phone"></i> +1 (380) 800 - 5680
+                            </a></p>
+                        </div>
+
                         <!-- Name -->
                         <div class="form-group position-relative">
                             <label for="formName" class="d-block">
@@ -764,6 +775,7 @@
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
                         </div>
+
                     </form>
                 </div>
 
@@ -803,6 +815,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
