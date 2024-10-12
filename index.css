@@ -132,7 +132,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-btns a {
+.hero-btns a:first-of-type {
     all: unset;
     cursor: pointer;
     margin-right: 10px;
@@ -148,7 +148,7 @@ body {
     transform: translateY(5em);
 } */
 
-.hero-btns button{
+.hero-btns a:last-of-type{
     all: unset;
     cursor: pointer;
     margin-right: 10px;
@@ -929,4 +929,24 @@ form .contact-icon {
     }
 }
 
+.modal-header {
+    border-bottom: none !important;
+}
 
+.modal-body {
+    border: none !important; 
+    font-size: 1.4rem !important;
+    text-align: center !important;
+    color: var(--main-color);
+    margin: 0; 
+    padding-bottom: 0 !important;
+}
+
+.modal-footer {
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+#modalMessage {
+    margin-bottom: 0 !important;
+}
