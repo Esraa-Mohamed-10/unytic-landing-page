@@ -330,6 +330,7 @@ body {
     font-size: var(--title-size);
 }
 
+
 .service-card {
     transition: all 0.3s ease;
     position: relative;
@@ -368,11 +369,103 @@ body {
     color: var(--main-color);
 }
 
+
 .why-choose-us h2+p {
     color: var(--main-color);
     font-size: 1.2rem;
 }
+.arrow-icon{
+    /* background-color: #ff923c; */
+    /* width: 50px; */
+}
+.arrow-icon i {
+    font-size: 30px;
+    color: var(--main-color);
+}
 
+.arrow-icon {
+    margin-top: -40px;
+}
+
+@media(max-width:1200px) {
+
+    .hex-container{
+        /* align-items: center !important; */
+        justify-content:unset !important;
+    }
+
+}
+@media(max-width:992px) {
+    .why-choose-us h2 {
+        font-size: var(--title-size);
+        text-align: center;
+    }
+    .why-choose-us h2+p {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .hex-container{
+        align-items: center !important;
+        justify-content: space-between;
+    }
+
+    .third-arrow {
+        display: none !important;
+    }
+}
+
+@media(max-width:768px) {
+    .why-choose-us h2 {
+        font-size: var(--title-responsive);
+        text-align: center;
+    }
+    .why-choose-us h2+p {
+        font-size: 0.8rem;
+        text-align: center;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .hex-container{
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .sec-arrow {
+        display: none !important;
+    }
+    .third-arrow {
+        display: block !important;
+    }
+} 
+
+@media(max-width:600px) {
+    .why-choose-us h2 {
+        font-size: var(--title-mobile);
+        text-align: center;
+    }
+    .why-choose-us h2+p {
+        font-size: 0.8rem;
+        text-align: center;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .hex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .arrow-icon {
+        display: none !important;
+    }
+
+}
+.hex-container{
+    align-items: center !important;
+    justify-content: space-between;
+}
 .hexagon-item {
     text-align: center;
     position: relative;
