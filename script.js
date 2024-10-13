@@ -5,7 +5,7 @@ script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js'
 script.type = 'text/javascript';
 script.onload = function () {
     // Initialize EmailJS
-    emailjs.init('uCbVxQUV-d7Mg-hll'); // Replace with your actual public key
+    emailjs.init('0xhca4hzX6IonMPOM'); // Replace with your actual public key
 };
 document.head.appendChild(script);
 
@@ -19,13 +19,13 @@ document.getElementById("contact").addEventListener("submit", function (event) {
 function SendMail() {
     let parms = {
         to_name: 'Unytic', // Set this to the recipient's name or you can pass it from the form
-        from_name: document.getElementById("formName").value,
-        from_email: document.getElementById("formEmail").value, // Change this to from_email
+        name: document.getElementById("formName").value,
+        email: document.getElementById("formEmail").value, // Change this to from_email
         message: document.getElementById("formMessage").value,
     };
 
     emailjs
-        .send("service_z7au3he", "template_8riijaf", parms)
+        .send("service_f6suv4h", "template_hpi48op", parms)
         .then(function (response) {
             document.getElementById('modalMessage').innerText = "Thanks for reaching out! We'll get back to you soon!";
             new bootstrap.Modal(document.getElementById('messageModal')).show();
