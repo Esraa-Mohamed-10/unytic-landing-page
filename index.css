@@ -98,13 +98,10 @@ body {
         transform: translateX(100%); 
         transition: transform 0.3s ease-in-out; 
     }
-
-    /* When the menu is open, it slides in */
     .navbar-collapse.show {
         transform: translateX(0); 
     }
 
-    /* Adjust the toggle button's position */
     .navbar-toggler {
         z-index: 1000; 
     }
