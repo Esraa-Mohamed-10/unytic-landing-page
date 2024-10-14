@@ -89,7 +89,7 @@ body {
         top: 0;
         right: 0;
         width: 50%; 
-        height: 30vh; 
+        height: 35vh; 
         background-color: #fff; 
         z-index: 999; 
         padding-top: 20px; 
@@ -111,6 +111,8 @@ body {
 /* hero section */
 .hero-section {
     height: 100vh;
+    /* background-image: url(./assets/imgs/hero.avif);
+    background-size: cover; */
 }
 
 .hero-content {
@@ -127,7 +129,7 @@ body {
 }
 
 .hero-p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     width: 90%;
 }
 
@@ -151,12 +153,17 @@ body {
 
 .hero-btns a:first-of-type {
     all: unset;
+    display: inline-block;
     cursor: pointer;
     margin-right: 10px;
-    background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #f8a000);
+    background: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #f8a000);
     border-radius: 20px;
     color: var(--text-color);
     padding: 6px 20px;
+    height: 4.5vh;
+    width: 200px;
+    text-align: center; /* Center the text */
+    line-height: 4.5vh; 
 }
 
 /* .hero-btns a:hover {

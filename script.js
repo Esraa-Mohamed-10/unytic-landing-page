@@ -12,28 +12,32 @@ document.head.appendChild(script);
 // Event Listener for Form Submission
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
-
+    clearErrors();
     const name = document.getElementById("formName").value.trim();
     const email = document.getElementById("formEmail").value.trim();
     const message = document.getElementById("formMessage").value.trim();
     
+    let hasError = false;
+
     if (!name) {
-        showToast("Name is required");
-        return;
+        showError("formName", "Name is required");
+        hasError = true;
     }
-    
+
     if (!email) {
-        showToast("Email is required");
-        return;
+        showError("formEmail", "Email is required");
+        hasError = true;
+    } else if (!validateEmail(email)) {
+        showError("formEmail", "Please enter a valid email");
+        hasError = true;
     }
-    
-    if (!validateEmail(email)) {
-        showToast("Please enter a valid email");
-        return;
-    }
-    
+
     if (!message) {
-        showToast("Message is required");
+        showError("formMessage", "Message is required");
+        hasError = true;
+    }
+
+    if (hasError) {
         return;
     }
 
@@ -64,10 +68,21 @@ function SendMail() {
 
 
 // Function to Show Toast
-function showToast(message) {
-    document.getElementById("toastMessage").innerText = message;
-    let toast = new bootstrap.Toast(document.getElementById('errorToast'));
-    toast.show();
+// Function to Show Error
+function showError(inputId, message) {
+    const inputElement = document.getElementById(inputId);
+    const errorElement = document.createElement("p");
+    errorElement.classList.add("text-danger");
+    errorElement.innerText = message;
+    inputElement.parentElement.appendChild(errorElement);
+}
+
+// Function to Clear Errors
+function clearErrors() {
+    const errorMessages = document.querySelectorAll(".text-danger");
+    errorMessages.forEach(function (element) {
+        element.remove();
+    });
 }
 
 // Function to Validate Email
